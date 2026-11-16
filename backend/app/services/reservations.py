@@ -89,7 +89,7 @@ async def calculate_total_revenue(property_id: str, tenant_id: str) -> Dict[str,
             
     except Exception as e:
         print(f"Database error for {property_id} (tenant: {tenant_id}): {e}")
-    raise
+        raise
         
         # # Create property-specific mock data for testing when DB is unavailable
         # # This ensures each property shows different figures
