@@ -67,7 +67,7 @@ async def calculate_total_revenue(property_id: str, tenant_id: str) -> Dict[str,
                 
                 if row:
                     # total_revenue = Decimal(str(row.total_revenue))
-                    total_revenue = Decimal(str(row.total_revenue)).quantize(decimal("0.01"), ROUND_HALF_UP)
+                    total_revenue = Decimal(str(row.total_revenue)).quantize(Decimal("0.01"), ROUND_HALF_UP)
                     return {
                         "property_id": property_id,
                         "tenant_id": tenant_id,
